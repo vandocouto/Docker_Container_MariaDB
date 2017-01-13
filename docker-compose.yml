@@ -1,13 +1,12 @@
 version: '2'
 services:
- dns:
-  image: mariadb
-  hostname: mariadbprod
-  container_name: mariadbprod
+ MariaDB:
+  image: mariadb:1.0.0
+  hostname: mariadb
+  container_name: mariadb
   privileged: true
   volumes:
-   - /storage/mariadbprod/dados:/var/lib/mysql
-   - /storage/mariadbprod/log:/var/log/mysql
+   - pgvolume:/var/lib/mysql
    - ./my.cnf:/etc/mysql/my.cnf
   expose:
    - "22"
@@ -15,3 +14,7 @@ services:
   ports:
    - "127.0.0.1:2200:22"
    - "3306:3306"
+volumes:
+ pgvolume:
+  external:
+   name: MariaDB
