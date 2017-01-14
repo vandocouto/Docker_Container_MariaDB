@@ -16,3 +16,4 @@ apt-get install docker-engine -y
 
 # instalando o Rex-Ray no Ubuntu16
 curl -sSL https://dl.bintray.com/emccode/rexray/install | sh -s -- stable
+
