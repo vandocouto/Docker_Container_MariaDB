@@ -13,8 +13,4 @@
 # docker-compose up -d
 </pre>
 <hr>
-- Para acessar o container (user: root / pass: root)
-<pre>
-# ssh root@127.0.0.1 -p2200
-</pre>
 
